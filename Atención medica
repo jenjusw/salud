@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salud Rural Conectada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background: #575757;
+    }
+    section {
+      padding: 20px;
+    }
+    .seccion {
+      display: none;
+    }
+    .activo {
+      display: block;
+    }
+    footer {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Salud Rural Conectada</h1>
+  <p>Información práctica para todos los grupos de edad</p>
+</header>
+
+<nav>
+  <a href="#" onclick="mostrar('ninos')">Niños</a>
+  <a href="#" onclick="mostrar('adolescentes')">Adolescentes</a>
+  <a href="#" onclick="mostrar('adultos')">Adultos</a>
+  <a href="#" onclick="mostrar('mayores')">Adultos Mayores</a>
+  <a href="#" onclick="mostrar('auxilios')">Primeros Auxilios</a>
+</nav>
+
+<section id="ninos" class="seccion activo">
+  <h2>Para niños</h2>
+  <p>Aprende cómo lavarte las manos y cuidarte jugando.</p>
+</section>
+
+<section id="adolescentes" class="seccion">
+  <h2>Para adolescentes</h2>
+  <p>Conoce cómo prevenir enfermedades comunes y cuidar tu salud mental.</p>
+</section>
+
+<section id="adultos" class="seccion">
+  <h2>Para adultos</h2>
+  <p>Guías sobre cómo medir la fiebre y el nivel de azúcar en casa.</p>
+</section>
+
+<section id="mayores" class="seccion">
+  <h2>Para adultos mayores</h2>
+  <p>Consejos sobre prevención, control de la presión y más.</p>
+</section>
+
+<section id="auxilios" class="seccion">
+  <h2>Primeros auxilios</h2>
+  <ul>
+    <li><strong>Medición de azúcar:</strong> Utiliza el glucometro antes de comer, en ayunas.</li>
+    <li><strong>Fiebre:</strong> Más de 38°C es fiebre. Reposo e hidratación son clave.</li>
+    <li><strong>Síntomas de dengue:</strong> Fiebre alta, dolor muscular, sarpullido. ¡Busca atención médica!</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 Salud Rural Conectada | Proyecto estudiantil</p>
+</footer>
+
+<script>
+  function mostrar(id) {
+    const secciones = document.querySelectorAll('.seccion');
+    secciones.forEach(seccion => seccion.classList.remove('activo'));
+    document.getElementById(id).classList.add('activo');
+  }
+</script>
+
+</body>
+</html>
